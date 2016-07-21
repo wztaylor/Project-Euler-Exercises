@@ -18,7 +18,7 @@ def isPrime(n):               #determines whether n is prime
     
 def generateLastPrime(n):
 
-    """Returns the last number in a list of prime numbers with length n"""
+    """Decided to do away with list to save on memory and processing speed"""
     #prime = 0
     noOfPrimes = 1  # cache length of primes for speed
     testNum = 3 # number to test for primality
@@ -26,7 +26,7 @@ def generateLastPrime(n):
         if isPrime(testNum):
             prime = testNum
             noOfPrimes += 1
-        testNum += 2
+        testNum += 2 #used 2 here b/c any even number can't be prime
     return prime
     
     
