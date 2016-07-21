@@ -19,22 +19,18 @@ def isPrime(n):               #determines whether n is prime
 def generateLastPrime(n):
 
     """Returns the last number in a list of prime numbers with length n"""
-    primes = [2,]
+    #prime = 0
     noOfPrimes = 1  # cache length of primes for speed
     testNum = 3 # number to test for primality
     while noOfPrimes < n:
         if isPrime(testNum):
-            primes.append(testNum)
+            prime = testNum
             noOfPrimes += 1
         testNum += 2
-    return primes[-1]
+    return prime
     
     
 def main():
-    desiredNum = 6
-    isDesiredNum = False
-    primeCount = 0
-    n = 6
     print(generateLastPrime(10001))
     
 main()
